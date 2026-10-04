@@ -19,13 +19,12 @@ public void printIndex(){
 
 
 public boolean saveToken (String keyword, String docTitle) {
-	System.out.println ("called with "+keyword);
 	
 	Map< String, Integer > docs = invertIndex.computeIfAbsent (keyword, k -> new HashMap<> ());
 	
 	docs.put(docTitle, docs.getOrDefault(docTitle, 0) + 1);
 	
-	printIndex ();
+	//printIndex ();
 	
 	return true;
 	

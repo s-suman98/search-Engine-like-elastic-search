@@ -26,14 +26,11 @@ RankingStrategyI rankingStrategy;
 InvertedIndex invertedIndex;
 
 
-public SearchEngine (RankingStrategyI rankingStrategy) {
-	
-	this.indexer = new Indexer (new InvertedIndex (),new SimpleTokenizer ());
-	this.rankingStrategy=rankingStrategy;
-	this.invertedIndex=new InvertedIndex ();
-	init ();
-	
-	invertedIndex.printIndex ();
+public SearchEngine(RankingStrategyI rankingStrategy) {
+	this.invertedIndex = new InvertedIndex();
+	this.indexer = new Indexer(this.invertedIndex, new SimpleTokenizer());
+	this.rankingStrategy = rankingStrategy;
+	init();
 }
 
 private void init () {
