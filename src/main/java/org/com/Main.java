@@ -13,7 +13,7 @@ public static void main (String[] args) {
 	
 	
 	
-	System.out.println (searchEngine.search ("software"));
+	System.out.println (searchEngine.search ("softwar"));
 
 
 
